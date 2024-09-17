@@ -1,0 +1,100 @@
+.classement #gamemodes-container, .classement #games-container {
+    position: relative;
+}
+
+.classement .dropdown-content-gamemode, .classement .dropdown-content-game {
+    position: absolute;
+    align-items: center;
+    background-color: #e0e5e9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+
+    max-height: 10rem;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.classement .search__bar {
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--twitter-background);
+
+}
+
+.classement .left {
+    width: 60%;
+    margin: 2rem 0rem;
+}
+
+.classement .right {
+    width: 40%;
+}
+
+.classement .search__bar p, .classement .classement__infos p {
+    color: var(--twitter-text-color);
+    font-weight: 700;
+    font-size: 1.7rem;
+    padding: 1rem;
+}
+
+.classement .search-input {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.classement .classement__infos, .classement .table__row {
+    display: flex;
+    align-items: center; 
+    text-align: left;
+    justify-content: center;
+    border-bottom: 1px solid var(--twitter-background);
+
+}
+
+.classement .table__row {
+    border-bottom : 1px solid rgba(101, 119, 134, 0.5);
+}
+
+.classement #classement-select {
+    width: 70%;
+    height: 100%;
+    border: none;
+    background-color: #e0e5e9;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f1010;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+
+}
+
+.classement .table__row .left{
+    width: 60%;
+}
+
+.classement .table__row .right{
+    width: 40%;
+}
+
+.classement .score p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(101, 119, 134);
+}
+
+.classement .friends__lists__item {
+    border :none;
+    margin : 0;
+    padding : 0.5rem;
+}
+
+.classement .table {
+    border : 1px solid rgba(101, 119, 134, 0.5);
+    border-radius : 2rem;
+    margin : 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(101, 119, 134, 0.5);
+}

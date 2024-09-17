@@ -1,0 +1,245 @@
+/*
+    Commentaire principal relatif au CSS :
+
+    Rappel :
+
+        - Osman s'est inspiré de 2 vidéos completement différentes donc même
+        si ce n'est pas 100% optimisé, nous avons 2 css distincts : celui là et signup.css.
+
+    Structure : 
+
+        - style.css
+
+            - tweet-box.css
+
+            - left-sidebar.css
+
+            - right-sidebar.css
+
+            - messages.css
+
+            - profile.css
+
+            - classement.css
+
+        - signup.css
+
+    A noter :
+
+        - 3 variables sont utilisées pour les couleurs.
+
+        - nous avons suivis une vidéo pour la réalisation de style.css, tweet-box.css,
+        left-sidebar.css, right-sidebar.css et donc pour la structure récurrente :
+
+            grid-container
+                left-sidebar
+                main
+                    page__title
+                    ...
+                right-sidebar
+
+        - Nous avons réutiliser plusieurs fois des mises en forme de la page d'accueil
+        (accueil.php) comme par exemple pour la search bar ou la tweet-box ainsi ainsi dans certain
+        PHP comme messagerie la class tweet-box est utilisé pour la mise en forme.
+
+        - Nous avons utilisé des dropdown à plusieurs endroits comme pour faire apparaître 
+        les boutons modify et delete ou les badges disponible pour modifier.
+
+        - Flex a été utilisé de nombreuses fois pour séparer une division en 2 ou plusieurs suivants l'axe horizontal.
+
+        - Pos: sticky a été utilisé pour laisser les sidebars et le titre statique.
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import "tweet-box.css";
+@import "left-sidebar.css";
+@import "right-sidebar.css";
+@import "messages.css";
+@import "profile.css";
+@import "classement.css";
+
+:root{
+    --twitter-color: #cbd81c;
+    --twitter-background: #e6ecf0;
+    --twitter-text-color: rgb(209, 196, 15);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-image: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+textarea{
+    resize: none;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--twitter-background);
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fa-twitter{
+    color: var(yellow);
+    font-size: 30px!important;
+}
+
+
+.sidebar{
+    border-right: 1px solid var(--twitter-background);
+}
+
+.right__sidebar {
+    border-left: 1px solid var(--twitter-background);
+}
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    max-width: 1850px ;/*1350px;*/
+    margin: 0 auto;
+    grid-template-columns: 0.8fr 1.4fr 1.1fr;
+    grid-template-rows: 0.8fr 1.5fr 1fr;
+    gap : 0px 0px;
+    grid-template-areas:
+    "sidebar main right__sidebar ."
+    "sidebar main right__sidebar ."
+    "sidebar main right__sidebar .";
+}
+
+.sidebar{ grid-area: sidebar;}
+.main{ grid-area: main;}
+.right__sidebar{ grid-area: right__sidebar;}
+
+
+/*design improvements*/
+.sidebar, .right__sidebar {
+    background-color: #f8f8f8;
+    border-radius: 2rem;
+}
+
+.messagerie .main {
+    background-color: #f8f8f8;
+    border-radius: 2rem;
+}
+
+.messagerie .right__sidebar {
+    background-color: #ffffff;
+    border-radius: none;
+}
+
+.messagerie .conversations__header, .messagerie .tweet__body {
+    background-color: #f8f8f8;
+}
+
+#msg {
+    border-radius: 1rem;
+}
+
+.trends__box {
+    border: 1px solid var(--twitter-background);
+}
+
+.profile .container {
+    margin: 2rem;
+}
+/*design improvements end */
+
+.page__title{
+    font-weight: 900;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--twitter-background);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.dropbtn {
+    color: #c6cacc;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .colorRed i, .dropdown-content .colorRed span{
+    color: red;
+    padding: 0 0.5rem;
+}
+
+.dropdown .colorOrange i, .dropdown-content .colorOrange span{
+    color: orange;
+    padding: 0 0.5rem;
+}
+
+.colorOrange, .colorRed{
+    display:flex;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 2rem;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e6e6e6;
+    border-radius: 2rem;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+@media screen and (max-width: 996px){
+    .sidebar ul li{
+        text-align: center;
+        padding: 15px 10px;
+        display: block;
+    }
+    .sidebar ul li span, .sidebar__tweet, .right__sidebar{
+        display: none;
+    }
+    .grid-container{
+        grid-template-columns: 0.3fr 1.7fr;
+        max-width: 700px;
+        grid-template-rows:1fr 1fr;
+        grid-template-areas:
+        "sidebar main"
+        "sidebar main";
+    }
+    .sidebar{ grid-area: sidebar;}
+    .main{ grid-area: main;}
+
+}

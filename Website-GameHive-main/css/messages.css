@@ -1,0 +1,104 @@
+.friends__lists__item{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0e5e9;
+    cursor: pointer;
+}
+
+.pseudo a , .name, #img, .container{
+    text-decoration: none;
+    color: var(--twitter-text-color);
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.conversations p {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #bebebe;
+    border-radius: 1rem;
+}
+
+.conversations .message-image img {
+    height: 10rem;
+    width: auto;
+}
+
+.conversations .message-right {
+    margin-left:21rem;
+    text-align: right;
+}
+
+.conversations .message-left {
+    margin-right:21rem;
+    text-align: left;
+}
+
+.statut img {
+    height: 3rem;
+    width: 3rem;
+    margin: 2rem;
+    opacity: 0.7;
+}
+
+.conversations .message-left img {
+    margin-left: 2rem;
+}
+
+.message-send{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1rem 2rem;
+    border-top: 1px solid #e0e5e9;
+    cursor: pointer;
+}
+
+.conversations .tweet__body {
+    padding: 2rem;
+    border-top: 1px solid #e0e5e9;
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.conversations .tweet__icons-add, .conversations .button__tweet {
+    margin-top: 0.5rem;
+}
+
+.conversations #img {
+border: none;
+}
+
+.messagerie .right__sidebar {
+    position: static ;
+    height: auto;
+}
+
+.conversations__header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.texte p{
+    text-decoration: none;
+    color: var(--twitter-text-color);
+    font-weight: 700;
+    font-size: 19px;
+    border : none;
+}
+
+.messagerie .main {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.messagerie .page__title{
+    background-color: #f8f8f8;
+}
