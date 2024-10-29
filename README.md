@@ -75,7 +75,6 @@ En plus d'avoir regardé des vidéos Youtube de Dgeo Dev et d'autres et des foru
 Nous avons, ensemble, brainstormé sur les fonctionnalités, réalisé sur papier les designs des modifications et fonctionnalités apportées et réalisé une première version de la base de données sur Creately.
 
 - **Osman** :
-  - Dessin du logo GameHive.
   - Réalisation de l'HTML et du CSS des pages (accueil.php et index.php).
   - Reprise du PHP des pages **login.php et signup.php** (Victor) pour y implémenter le CSS.
   
